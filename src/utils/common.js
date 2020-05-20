@@ -1,7 +1,7 @@
 const DEFAULT_UID_LENGTH = 8
 const DEFAULT_SECOND = 60
 
-export const uid = (length = DEFAULT_UID_LENGTH) => {
+export const uuid = (length = DEFAULT_UID_LENGTH) => {
   return Number(
     Math.random()
       .toString()
