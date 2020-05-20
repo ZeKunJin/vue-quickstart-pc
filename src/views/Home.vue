@@ -1,18 +1,18 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    desktop: {{ isDesktop() }}<br />
+    tablet: {{ isTablet() }}<br />
+    mobile: {{ isMobile() }}<br />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Vue from 'vue'
+import { Button } from 'vant'
+import { AppDeviceEnquire, mixinDevice } from '@/utils/mixin'
+Vue.use(Button)
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+  mixins: [AppDeviceEnquire, mixinDevice]
 }
 </script>
