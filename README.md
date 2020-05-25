@@ -1,4 +1,4 @@
-# protal-template-mobile
+# vue-quickstart-mobile
 
 ## Project setup
 ```
