@@ -1,13 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import {RouteView} from '@/layouts'
+
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: () => import('@/views/home')
+    path: '/auth',
+    redirect: '/auth/login',
+    component: RouteView,
+    hidden: true,
+    children: [
+      {
+        path: 'login',
+        name: 'login',
+        component: () => import('@/views/auth/login')
+      },
+      {
+        path: 'register',
+        name: 'register',
+        component: () => import('@/views/auth/register')
+      },
+      {
+        path: 'forget',
+        name: 'forget',
+        component: () => import('@/views/auth/forget')
+      }
+    ]
   }
 ]
 
