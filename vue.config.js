@@ -22,7 +22,8 @@ const vueConfig = {
       less: {
         modifyVars: {
           // custom theme
-        }
+        },
+        javascriptEnabled: true
       }
     }
   }
