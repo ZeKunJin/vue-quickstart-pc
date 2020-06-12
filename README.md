@@ -1,4 +1,4 @@
-# vue-quickstart-mobile
+# vue-quickstart-pc
 
 ## Project setup
 ```
